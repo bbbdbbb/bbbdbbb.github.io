@@ -1846,7 +1846,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #454ad1;
+  background: #bae8c4;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2690,4 +2690,28 @@ embed {
   padding: 25px;
   -webkit-box-shadow: 0 0 7px #cacbcb;
   -moz-box-shadow: 0 0 7px #cacbcc;
+}
+.header-inner {
+  padding: 45px 0 0px;
+  width: 700px;
+}
+.posts-expand {
+  padding-top: 0;
+}
+.site-author-name {
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  font-size: 20px;
+}
+.posts-expand .post-eof {
+  margin: 40px auto 40px;
+  background: #fff;
+}
+.site-title {
+  color: #000;
+  font-family: 'Comic Sans MS', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+}
+.brand {
+  background: transparent;
 }
