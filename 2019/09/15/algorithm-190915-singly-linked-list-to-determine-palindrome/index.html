@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="算法题目,数据结构,链表,字符串,">
 
 
 
@@ -79,17 +79,20 @@
 
 
 
-<meta name="description" content="我是浜浜滨的棒棒冰，这是我的Blog！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta name="description" content="PrefaceGiven a singly linked list, determine if it is a palindrome.Follow up:Could you do it in O(n) time and O(1) space?">
+<meta name="keywords" content="算法题目,数据结构,链表,字符串">
+<meta property="og:type" content="article">
+<meta property="og:title" content="判断一个用链表储存的字符串是不是一个回文串">
+<meta property="og:url" content="http://yoursite.com/2019/09/15/algorithm-190915-singly-linked-list-to-determine-palindrome/index.html">
 <meta property="og:site_name" content="bbbdbbb&#39;s Blog">
-<meta property="og:description" content="我是浜浜滨的棒棒冰，这是我的Blog！">
+<meta property="og:description" content="PrefaceGiven a singly linked list, determine if it is a palindrome.Follow up:Could you do it in O(n) time and O(1) space?">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-26T07:41:23.058Z">
+<meta property="og:image" content="http://yoursite.com/img/algorithm-190915-singly-linked-list-to-determine-palindrome-ing-preface.png">
+<meta property="og:updated_time" content="2019-09-15T09:38:28.096Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
-<meta name="twitter:description" content="我是浜浜滨的棒棒冰，这是我的Blog！">
+<meta name="twitter:title" content="判断一个用链表储存的字符串是不是一个回文串">
+<meta name="twitter:description" content="PrefaceGiven a singly linked list, determine if it is a palindrome.Follow up:Could you do it in O(n) time and O(1) space?">
+<meta name="twitter:image" content="http://yoursite.com/img/algorithm-190915-singly-linked-list-to-determine-palindrome-ing-preface.png">
 
 
 
@@ -135,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/about/">
+  <link rel="canonical" href="http://yoursite.com/2019/09/15/algorithm-190915-singly-linked-list-to-determine-palindrome/">
 
 
 
 
 
-  <title>about | bbbdbbb's Blog</title>
+  <title>判断一个用链表储存的字符串是不是一个回文串 | bbbdbbb's Blog</title>
   
 
 
@@ -266,34 +269,242 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/15/algorithm-190915-singly-linked-list-to-determine-palindrome/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="浜浜滨的棒棒冰">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="bbbdbbb's Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">about</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>我是浜浜滨的棒棒冰，这是我的Blog！</p>
-
+          <h1 class="post-title" itemprop="name headline">判断一个用链表储存的字符串是不是一个回文串</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-15T13:33:07+08:00">
+                2019-09-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/algorithm/" itemprop="url" rel="index">
+                    <span itemprop="name">algorithm</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p><img src="/img/algorithm-190915-singly-linked-list-to-determine-palindrome-ing-preface.png" alt></p>
+<h1 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h1><p>Given a singly linked list, determine if it is a palindrome.<br><strong>Follow up:</strong><br>Could you do it in O(n) time and O(1) space?</p>
+<a id="more"></a>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>&nbsp;&nbsp;使用快慢两个指针找到链表中点，慢指针每次前进一步，快指针每次前进两步。在慢指针前进的过程中，同时修改其 next 指针，使得链表前半部分反序。最后比较中点两侧的链表是否相等。</p>
+<h1 id="实现代码"><a href="#实现代码" class="headerlink" title="实现代码"></a>实现代码</h1><pre><code>/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     char val;
+ *     ListNode next;
+ *     ListNode(char x) { val = x; }
+ * }
+ */
+class Solution {
+  public boolean isPalindrome(ListNode head) {        
+    if (head == null || head.next == null) {
+      //字符串长度为0或1
+      return true;
+    }
+
+    ListNode prev = null;
+    ListNode slow = head;
+    ListNode fast = head;
+
+    while (fast != null &amp;&amp; fast.next != null) {
+      //快指针前进两步
+      fast = fast.next.next;
+      //慢指针前进一步，同时修改其next指针，使得链表前半部分反序
+      ListNode next = slow.next;
+      slow.next = prev;
+      prev = slow;
+      slow = next;
+    }
+
+    //fast.next=null  =&gt;  链表长度为双数
+    if (fast.next == null) {
+      slow = slow.next;
+    }
+
+    //slow指向链表的后半部分，prev指向链表前半部分的反序
+    while (slow != null) {
+      if (slow.val != prev.val) {
+        return false;
+      }
+      slow = slow.next;
+      prev = prev.next;
+    }
+
+    return true;
+  }
+}</code></pre><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ul>
+<li>需要遍历一次链表，时间复杂度是O(n);</li>
+<li>需要3个额外的指针(next,fast,slow)<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="空间复杂度要看额外的内存消耗，不是看链表本身存储需要多少空间">[1]</span></a></sup>,空间复杂度是O(1)</li>
+</ul>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">空间复杂度要看额外的内存消耗，不是看链表本身存储需要多少空间<a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div>
       
     </div>
     
     
     
+
+	
+	
+    
+
+    
+
+    
+		
+
+	
+    <footer class="post-footer">
+      
+		<div style="text-align:center;color: #ccc;font-size:14px;">---------------- The End ----------------</div>
+		<div>
+			<p id="div-border-left-red">
+			<b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br>
+			<span>
+				<b>本文地址: </b><a href="/2019/09/15/algorithm-190915-singly-linked-list-to-determine-palindrome/" title="判断一个用链表储存的字符串是不是一个回文串">http://yoursite.com/2019/09/15/algorithm-190915-singly-linked-list-to-determine-palindrome/</a><br><b>转载请注明出处, 谢谢！</b>
+			</span>
+			</p>
+		</div>
+        <div class="post-tags">
+          
+            <a href="/tags/算法题目/" rel="tag"><i class="fa fa-tag"></i> 算法题目</a>
+          
+            <a href="/tags/数据结构/" rel="tag"><i class="fa fa-tag"></i> 数据结构</a>
+          
+            <a href="/tags/链表/" rel="tag"><i class="fa fa-tag"></i> 链表</a>
+          
+            <a href="/tags/字符串/" rel="tag"><i class="fa fa-tag"></i> 字符串</a>
+          
+        </div>
+      
+
+      
+      
+	  	
+      
+
+      
+	  	
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/09/01/zjjh-190906-the-plan-end-of-2019/" rel="next" title="The plan of end 2019">
+                <i class="fa fa-chevron-left"></i> The plan of end 2019
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+	  
+	  
+    </footer>
+  </div>
+  
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -326,8 +537,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -389,6 +609,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Preface"><span class="nav-number">1.</span> <span class="nav-text">Preface</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#思路"><span class="nav-number">2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#实现代码"><span class="nav-number">3.</span> <span class="nav-text">实现代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
