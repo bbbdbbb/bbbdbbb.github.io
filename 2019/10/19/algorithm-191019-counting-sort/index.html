@@ -77,7 +77,7 @@
 
 
 
-  <meta name="keywords" content="算法题目,链表,">
+  <meta name="keywords" content="排序算法,">
 
 
 
@@ -88,20 +88,20 @@
 
 
 
-<meta name="description" content="PrefaceGiven a linked list, determine if it has a cycle in it.Follow up:Can you solve it using O(1) (i.e. constant) memory?">
-<meta name="keywords" content="算法题目,链表">
+<meta name="description" content="Preface&amp;nbsp;&amp;nbsp;如何给50万高考考生的成绩进行排序？">
+<meta name="keywords" content="排序算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="letcode141判断链表是否有环">
-<meta property="og:url" content="http://yoursite.com/2019/09/17/letcode-190917-141-linked-list-cycle/index.html">
+<meta property="og:title" content="计数排序">
+<meta property="og:url" content="http://yoursite.com/2019/10/19/algorithm-191019-counting-sort/index.html">
 <meta property="og:site_name" content="bbbdbbb&#39;s Blog">
-<meta property="og:description" content="PrefaceGiven a linked list, determine if it has a cycle in it.Follow up:Can you solve it using O(1) (i.e. constant) memory?">
+<meta property="og:description" content="Preface&amp;nbsp;&amp;nbsp;如何给50万高考考生的成绩进行排序？">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/img/letcode-190917-141-linked-list-cycle-preface.jpg">
-<meta property="og:updated_time" content="2019-09-17T09:51:15.140Z">
+<meta property="og:image" content="http://yoursite.com/img/algorithm/algorithm-191019-counting-sort/preface.jpg">
+<meta property="og:updated_time" content="2019-10-19T10:02:51.795Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="letcode141判断链表是否有环">
-<meta name="twitter:description" content="PrefaceGiven a linked list, determine if it has a cycle in it.Follow up:Can you solve it using O(1) (i.e. constant) memory?">
-<meta name="twitter:image" content="http://yoursite.com/img/letcode-190917-141-linked-list-cycle-preface.jpg">
+<meta name="twitter:title" content="计数排序">
+<meta name="twitter:description" content="Preface&amp;nbsp;&amp;nbsp;如何给50万高考考生的成绩进行排序？">
+<meta name="twitter:image" content="http://yoursite.com/img/algorithm/algorithm-191019-counting-sort/preface.jpg">
 
 
 
@@ -147,13 +147,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/09/17/letcode-190917-141-linked-list-cycle/">
+  <link rel="canonical" href="http://yoursite.com/2019/10/19/algorithm-191019-counting-sort/">
 
 
 
 
 
-  <title>letcode141判断链表是否有环 | bbbdbbb's Blog</title>
+  <title>计数排序 | bbbdbbb's Blog</title>
   
 
 
@@ -290,7 +290,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/17/letcode-190917-141-linked-list-cycle/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/19/algorithm-191019-counting-sort/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="浜浜滨的棒棒冰">
@@ -307,7 +307,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">letcode141判断链表是否有环</h1>
+          <h1 class="post-title" itemprop="name headline">计数排序</h1>
         
 
         <div class="post-meta">
@@ -319,8 +319,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-17T17:08:02+08:00">
-                2019-09-17
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-19T17:32:00+08:00">
+                2019-10-19
               </time>
             
 
@@ -342,8 +342,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/letcode/" itemprop="url" rel="index">
-                    <span itemprop="name">letcode</span>
+                  <a href="/categories/algorithm/" itemprop="url" rel="index">
+                    <span itemprop="name">algorithm</span>
                   </a>
                 </span>
 
@@ -379,47 +379,11 @@
       
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p><img src="/img/letcode-190917-141-linked-list-cycle-preface.jpg" alt></p>
-<h1 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h1><p>Given a linked list, determine if it has a cycle in it.<br><strong>Follow up:</strong><br>Can you solve it using O(1) (i.e. constant) memory?</p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p><img src="/img/algorithm/algorithm-191019-counting-sort/preface.jpg" alt></p>
+<h1 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h1><p>&nbsp;&nbsp;如何给50万高考考生的成绩进行排序？</p>
 <a id="more"></a>
-<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>&nbsp;&nbsp;一开始，我想的是直接遍历链表，如果出现某一个节点的next指针为<code>null</code>,则证明该链表无环，反之有环。在写代码时发现，当链表有环时，程序会陷入死循环中。所以这个思路只能判断链表无环，不能判断链表有环。<br>&nbsp;&nbsp;换一个思路,利用快慢指针<span id="inline-blue">fast</span>和指针<span id="inline-blue">slow</span>同时指向head，然后fast向后走两步，slow向后走一步；若fast指向null，证明该链表无环；若fast在某一时刻和slow指向同一节点<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="指针fast在环中跑了一圈或多圈
-">[1]</span></a></sup>，则证明该链表有环。</p>
-<h1 id="实现代码"><a href="#实现代码" class="headerlink" title="实现代码"></a>实现代码</h1><pre><code>/**
- * Definition for singly-linked list.
- * class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;
- *     }
- * }
- */
-public class Solution {
-    public boolean hasCycle(ListNode head) {
-        //判断是否为空链表
-        if(head==null) return false;
+<h1 id="初识计数排序"><a href="#初识计数排序" class="headerlink" title="初识计数排序"></a>初识计数排序</h1><p>&nbsp;&nbsp;当初我17年高考的时候，提说四川考生有50万，竞争十分激烈，虽然现在我已不记得了我当初在四川省的排名，但是我可以去学习怎么对这50万考生的成绩进行排序，话不多说，开始吧。<br><br>&nbsp;&nbsp;高考的满分是760分，所以我们就设置761个容器，根据每个考生成绩，将50万考生分别放进这761个容器内。每个容器内装的都是成绩相同的考生，所以就不需要对容器内的考生再进行一次排序了。<br></p>
 
-        ListNode fast=head;
-        ListNode slow=head;
-
-        //若链表无环，则退出循环
-        while(fast.next!=null &amp;&amp; fast.next.next!=null){
-            fast=fast.next.next;
-            slow=slow.next;
-            if(fast==slow) return true;
-        }
-        return false;
-    }
-}</code></pre><br>
-
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ul>
-<li>时间复杂度：O(n)</li>
-<li>空间复杂度：O(1)</li>
-</ul>
-<br>
-
-<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">指针fast在环中跑了一圈或多圈<a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div>
       
     </div>
     
@@ -443,15 +407,13 @@ public class Solution {
 			<p id="div-border-left-red">
 			<b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br>
 			<span>
-				<b>本文地址: </b><a href="/2019/09/17/letcode-190917-141-linked-list-cycle/" title="letcode141判断链表是否有环">http://yoursite.com/2019/09/17/letcode-190917-141-linked-list-cycle/</a><br><b>转载请注明出处, 谢谢！</b>
+				<b>本文地址: </b><a href="/2019/10/19/algorithm-191019-counting-sort/" title="计数排序">http://yoursite.com/2019/10/19/algorithm-191019-counting-sort/</a><br><b>转载请注明出处, 谢谢！</b>
 			</span>
 			</p>
 		</div>
         <div class="post-tags">
           
-            <a href="/tags/算法题目/" rel="tag"><i class="fa fa-tag"></i> 算法题目</a>
-          
-            <a href="/tags/链表/" rel="tag"><i class="fa fa-tag"></i> 链表</a>
+            <a href="/tags/排序算法/" rel="tag"><i class="fa fa-tag"></i> 排序算法</a>
           
         </div>
       
@@ -466,8 +428,8 @@ public class Solution {
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/09/17/letcode-190917-206-reverse-a-singly-linked-list/" rel="next" title="letcode206反转一个单链表">
-                <i class="fa fa-chevron-left"></i> letcode206反转一个单链表
+              <a href="/2019/10/16/algorithm-191016-merge-sort/" rel="next" title="归并排序">
+                <i class="fa fa-chevron-left"></i> 归并排序
               </a>
             
           </div>
@@ -476,8 +438,8 @@ public class Solution {
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/09/18/rjaz-190918-tomcat/" rel="prev" title="Tomcat的安装与启动">
-                Tomcat的安装与启动 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/11/18/letcode-191118-104-maximum-depth-of-BT/" rel="prev" title="letcode104二叉树的最大深度">
+                letcode104二叉树的最大深度 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -615,7 +577,7 @@ public class Solution {
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Preface"><span class="nav-number">1.</span> <span class="nav-text">Preface</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#思路"><span class="nav-number">2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#实现代码"><span class="nav-number">3.</span> <span class="nav-text">实现代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Preface"><span class="nav-number">1.</span> <span class="nav-text">Preface</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#初识计数排序"><span class="nav-number">2.</span> <span class="nav-text">初识计数排序</span></a></li></ol></div>
             
 
           </div>
