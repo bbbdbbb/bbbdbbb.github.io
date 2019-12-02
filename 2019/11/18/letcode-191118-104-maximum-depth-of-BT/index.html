@@ -88,19 +88,19 @@
 
 
 
-<meta name="description" content="D:\MyBlog\source\img\letcode\letcode-191118-104-maximum-depth-of-BT PrefaceGiven a binary tree, find its maximum depth.The maximum depth is the number of nodes along the longest path from the root nod">
+<meta name="description" content="PrefaceGiven a binary tree, find its maximum depth.The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.Note:A leaf is a node with no chil">
 <meta name="keywords" content="算法题目,树">
 <meta property="og:type" content="article">
 <meta property="og:title" content="letcode104二叉树的最大深度">
 <meta property="og:url" content="http://yoursite.com/2019/11/18/letcode-191118-104-maximum-depth-of-BT/index.html">
 <meta property="og:site_name" content="bbbdbbb&#39;s Blog">
-<meta property="og:description" content="D:\MyBlog\source\img\letcode\letcode-191118-104-maximum-depth-of-BT PrefaceGiven a binary tree, find its maximum depth.The maximum depth is the number of nodes along the longest path from the root nod">
+<meta property="og:description" content="PrefaceGiven a binary tree, find its maximum depth.The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.Note:A leaf is a node with no chil">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/img/letcode/letcode-191118-104-maximum-depth-of-BT/head.jpg">
-<meta property="og:updated_time" content="2019-11-18T14:40:09.458Z">
+<meta property="og:updated_time" content="2019-12-02T05:17:23.506Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="letcode104二叉树的最大深度">
-<meta name="twitter:description" content="D:\MyBlog\source\img\letcode\letcode-191118-104-maximum-depth-of-BT PrefaceGiven a binary tree, find its maximum depth.The maximum depth is the number of nodes along the longest path from the root nod">
+<meta name="twitter:description" content="PrefaceGiven a binary tree, find its maximum depth.The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.Note:A leaf is a node with no chil">
 <meta name="twitter:image" content="http://yoursite.com/img/letcode/letcode-191118-104-maximum-depth-of-BT/head.jpg">
 
 
@@ -379,37 +379,58 @@
       
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>D:\MyBlog\source\img\letcode\letcode-191118-104-maximum-depth-of-BT<br><img src="/img/letcode/letcode-191118-104-maximum-depth-of-BT/head.jpg" alt></p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p><img src="/img/letcode/letcode-191118-104-maximum-depth-of-BT/head.jpg" alt></p>
 <h1 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h1><p>Given a binary tree, find its maximum depth.<br>The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.<br><strong>Note:</strong><br>A leaf is a node with no children.</p>
 <a id="more"></a>
-<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><h1 id="实现代码"><a href="#实现代码" class="headerlink" title="实现代码"></a>实现代码</h1><p>   /**<br>    * Definition for a binary tree node.<br>    * public class TreeNode {<br>    *     int val;<br>    *     TreeNode left;<br>    *     TreeNode right;<br>    *     TreeNode(int x) { val = x; }<br>    * }<br>    */<br>   class Solution {<br>       public int maxDepth(TreeNode root) {<br>           Queue<treenode> queue = new ArrayBlockingQueue<treenode>(2000);<br>           int num=1;//用于记录当前层的未出队的节点个数<br>           int high=0;<br>           int count=0;//用于记录下一层入队的节点个数</treenode></treenode></p>
-<pre><code>    if(root==null){
-        return 0;
-    }
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>&nbsp;&nbsp;使用广度优先遍历树的方法：<br>&nbsp;&nbsp;第一步，定义一个队列<span id="inline-blue">queue</span>,从树root中读出树的根节点放进<span id="inline-blue">queue</span>中。<br>&nbsp;&nbsp;第二步，让<span id="inline-blue">queue</span>中的节点依次出队列，每出队一个节点，就将其左右子节点添加到<span id="inline-blue">queue</span>中。<br>&nbsp;&nbsp;第三步，当这一层的所有节点都以出队，树的高度<span id="inline-green">high</span>就加一，然后用新入队的子节点们作为新的一层重复第二步，直到当前层的所有节点都没有子节点（最后一层）。<br>&nbsp;&nbsp;注意：这里会设计到多个变量，用于记录当前层的未出队的节点个数<span id="inline-green">num</span>,用于记录下一层入队的节点个数<span id="inline-green">count</span>,要明白它们所表示的含义，不要弄混淆。</p>
+<h1 id="实现代码"><a href="#实现代码" class="headerlink" title="实现代码"></a>实现代码</h1><pre><code>/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public int maxDepth(TreeNode root) {
+        Queue&lt;TreeNode&gt; queue = new ArrayBlockingQueue&lt;TreeNode&gt;(2000);
+        int num=1;//用于记录当前层的未出队的节点个数
+        int high=0;
+        int count=0;//用于记录下一层入队的节点个数
 
-    queue.offer(root);
-    while(count!=0 || num!=0){
-        TreeNode head =queue.element();
-        if(head.left!=null){
-            queue.offer(head.left);
-            count++;
-        } 
-        if(head.right!=null){
-            queue.offer(head.right);
-            count++;
-        } 
-        queue.poll();
-        num--;
-        if(num==0){
-            high++;
-            num=count;
-            count=0;
+        if(root==null){
+            return 0;
         }
-    }
 
-    return high;
-}</code></pre><p>   }</p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1>
+        queue.offer(root);
+        while(count!=0 || num!=0){
+            TreeNode head =queue.element();
+            if(head.left!=null){
+                queue.offer(head.left);
+                count++;
+            } 
+            if(head.right!=null){
+                queue.offer(head.right);
+                count++;
+            } 
+            queue.poll();
+            num--;
+            if(num==0){
+                high++;
+                num=count;
+                count=0;
+            }
+        }
+
+        return high;
+    }
+}  </code></pre><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ul>
+<li>方法比较简单，但是变量较多容易混淆；</li>
+<li>时间复杂度：O(n),遍历一次树；</li>
+<li>可以用递归的解法，代码会更加简洁，以后学习递归的时候在补充。</li>
+</ul>
+
       
     </div>
     
