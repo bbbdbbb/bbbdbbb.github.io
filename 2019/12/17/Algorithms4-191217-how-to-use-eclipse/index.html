@@ -103,7 +103,13 @@
 <meta property="og:image" content="http://yoursite.com/img/Algorithms4/191217-how-to-use-eclipse/build3.png">
 <meta property="og:image" content="http://yoursite.com/img/Algorithms4/191217-how-to-use-eclipse/build4.png">
 <meta property="og:image" content="http://yoursite.com/img/Algorithms4/191217-how-to-use-eclipse/data.png">
-<meta property="og:updated_time" content="2019-12-17T12:40:25.015Z">
+<meta property="og:image" content="http://yoursite.com/img/Algorithms4/191217-how-to-use-eclipse/input-img01.png">
+<meta property="og:image" content="http://yoursite.com/img/Algorithms4/191217-how-to-use-eclipse/input-img02.png">
+<meta property="og:image" content="http://yoursite.com/img/Algorithms4/191217-how-to-use-eclipse/input-img03.png">
+<meta property="og:image" content="http://yoursite.com/img/Algorithms4/191217-how-to-use-eclipse/result.png">
+<meta property="og:image" content="http://yoursite.com/img/Algorithms4/191217-how-to-use-eclipse/output.png">
+<meta property="og:image" content="http://yoursite.com/img/Algorithms4/191217-how-to-use-eclipse/temp_txt.png">
+<meta property="og:updated_time" content="2019-12-19T04:46:41.996Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习《算法 4》需要注意的标准输入输出和重定向">
 <meta name="twitter:description" content="Preface&amp;nbsp;&amp;nbsp;在学习《算法 4》这本经典作品时，我们需要导入作者开发的标准库Std*: ，还要设置标准输入输出重定向。这对于我们新手来说，既不好理解，又不好操作，代码调试不出来会极大的打击自己学习的兴趣。&amp;nbsp;&amp;nbsp;现在跟着我，一起把这些问题给弄明白吧！">
@@ -390,10 +396,49 @@
 <a id="more"></a>
 
 <h1 id="导入标准库Std"><a href="#导入标准库Std" class="headerlink" title="导入标准库Std*:"></a>导入标准库Std*:</h1><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>&nbsp;&nbsp;打开网站：<a href="https://algs4.cs.princeton.edu/code/" target="_blank" rel="noopener">点击进入Algorithms4官网</a> 点击下载<span id="inline-green">algs4.jar</span>和<span id="inline-green">algs4-data.zip</span><br><img src="/img/Algorithms4/191217-how-to-use-eclipse/build0.png" alt></p>
-<h2 id="导入jar包"><a href="#导入jar包" class="headerlink" title="导入jar包"></a>导入jar包</h2><p>&nbsp;&nbsp;在导入<code>标准库Std*:</code>前，书上的1.1.10测试代码会报错：<br><img src="/img/Algorithms4/191217-how-to-use-eclipse/build2.png" alt><br>&nbsp;&nbsp;将刚才的网页滑到下面，查看在eclipse中导入jar包的方法：<br><img src="/img/Algorithms4/191217-how-to-use-eclipse/build1.png" alt><br><img src="/img/Algorithms4/191217-how-to-use-eclipse/build3.png" alt><br>&nbsp;&nbsp;在导入jar包后，书上的代码就不会报错了。<br><img src="/img/Algorithms4/191217-how-to-use-eclipse/build4.png" alt></p>
+<h2 id="导入jar包"><a href="#导入jar包" class="headerlink" title="导入jar包"></a>导入jar包</h2><p>&nbsp;&nbsp;在导入<code>标准库Std*:</code>前，书上的1.1.10测试代码会报错：<br><img src="/img/Algorithms4/191217-how-to-use-eclipse/build2.png" alt><br>&nbsp;&nbsp;将刚才的网页滑到下面，查看在eclipse中导入jar包的方法：<br><img src="/img/Algorithms4/191217-how-to-use-eclipse/build1.png" alt><br><img src="/img/Algorithms4/191217-how-to-use-eclipse/build3.png" alt><br>&nbsp;&nbsp;在导入jar包后，再import相应的package，书上的代码就不会报错了。<br><img src="/img/Algorithms4/191217-how-to-use-eclipse/build4.png" alt></p>
 <h2 id="复制data文件到项目中"><a href="#复制data文件到项目中" class="headerlink" title="复制data文件到项目中"></a>复制data文件到项目中</h2><p><img src="/img/Algorithms4/191217-how-to-use-eclipse/data.png" alt></p>
-<h1 id="标准输入输出和重定向"><a href="#标准输入输出和重定向" class="headerlink" title="标准输入输出和重定向"></a>标准输入输出和重定向</h1><h2 id="书上案例BinarySearch-class"><a href="#书上案例BinarySearch-class" class="headerlink" title="书上案例BinarySearch.class"></a>书上案例BinarySearch.class</h2><p>sdf </p>
+<h1 id="标准输入输出和重定向"><a href="#标准输入输出和重定向" class="headerlink" title="标准输入输出和重定向"></a>标准输入输出和重定向</h1><h2 id="书上案例BinarySearch-class"><a href="#书上案例BinarySearch-class" class="headerlink" title="书上案例BinarySearch.class"></a>书上案例BinarySearch.class</h2><pre><code>package chapter1;
 
+import java.util.Arrays;
+
+import edu.princeton.cs.algs4.In;
+import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdOut;
+
+public class X1_1_10_BinarySearch {
+
+    public static void main(String[] args) {
+        //将类型String的参数转化成Int类型
+        int[] whitelist = In.readInts(args[0]);
+        Arrays.sort(whitelist);
+        while(!StdIn.isEmpty()) {
+            int key = StdIn.readInt();
+            if(rank(key,whitelist)&lt;0)
+                StdOut.println(key+&quot;...&quot;);
+        }
+    }
+
+    public static int rank(int key,int[] a) {
+        //数组a[]必须是有序的
+        int lo = 0;
+        int hi = a.length-1;
+        while(lo&lt;=hi) {
+            int mid = lo+(hi-lo)/2;
+            if(key&lt;a[mid])
+                hi = mid-1;
+            else if(key&gt;a[mid])
+                lo = mid + 1;
+            else
+                return mid;
+        }
+        return -1;
+    }
+}</code></pre><h2 id="将txt文件作为main函数的参数"><a href="#将txt文件作为main函数的参数" class="headerlink" title="将txt文件作为main函数的参数"></a>将txt文件作为main函数的参数</h2><p>&nbsp;&nbsp;BinarySearch.class需要一个白名单文件tinyW.txt作为参数。设置main函数参数的方法如下：右击，选择<code>Run As</code>的<code>Run Configurations</code>,选择<code>Arguments</code>,在<code>Program argument</code>中输入txt文件的相对地址。<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="这里可以输入一组字符序列作为参数，例如“9 6 2 4 99 13 14”；如要使用Int类型，请记得在程序内进行类型转换。
+">[1]</span></a></sup><br><img src="/img/Algorithms4/191217-how-to-use-eclipse/input-img01.png" alt><br><img src="/img/Algorithms4/191217-how-to-use-eclipse/input-img02.png" alt></p>
+<h2 id="将tinyT-txt文件重定向为标准输入"><a href="#将tinyT-txt文件重定向为标准输入" class="headerlink" title="将tinyT.txt文件重定向为标准输入"></a>将tinyT.txt文件重定向为标准输入</h2><p>&nbsp;&nbsp;在BinarySearch.class中需要一个文件tinyT.txt作为标准输入。设置标准输入的方法如下：右击，选择<code>Run As</code>的<code>Run Configurations</code>,选择<code>Common</code>,勾选<code>input</code>,中输入tinyT.txt文件的绝对地址<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="有兴趣的可以研究文件的相对路径该怎么写。">[2]</span></a></sup>。<br><img src="/img/Algorithms4/191217-how-to-use-eclipse/input-img03.png" alt><br>&nbsp;&nbsp;执行程序，将在tinyT.txt文件中而不在tinyW.txt文字中的元素输出到控制台中。<br><img src="/img/Algorithms4/191217-how-to-use-eclipse/result.png" alt></p>
+<h2 id="将temp-txt文件重定向为标准输出"><a href="#将temp-txt文件重定向为标准输出" class="headerlink" title="将temp.txt文件重定向为标准输出"></a>将temp.txt文件重定向为标准输出</h2><p>&nbsp;&nbsp;在algs4-data文件中创建空的temp.txt文件，将其设置为标准输出。右击，选择<code>Run As</code>的<code>Run Configurations</code>,选择<code>Common</code>,勾选<code>Output</code>,中输入temp.txt文件的绝对地址。点击<code>Run</code>,执行程序。<br><img src="/img/Algorithms4/191217-how-to-use-eclipse/output.png" alt><br>&nbsp;&nbsp;原先为空的temp.txt文件中被写入了结果：<br><img src="/img/Algorithms4/191217-how-to-use-eclipse/temp_txt.png" alt></p>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">这里可以输入一组字符序列作为参数，例如“9 6 2 4 99 13 14”；如要使用Int类型，请记得在程序内进行类型转换。<a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">有兴趣的可以研究文件的相对路径该怎么写。<a href="#fnref:2" rev="footnote"> ↩</a></span></li></ol></div></div>
       
     </div>
     
@@ -585,7 +630,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Preface"><span class="nav-number">1.</span> <span class="nav-text">Preface</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#导入标准库Std"><span class="nav-number">2.</span> <span class="nav-text">导入标准库Std*:</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载"><span class="nav-number">2.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#导入jar包"><span class="nav-number">2.2.</span> <span class="nav-text">导入jar包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复制data文件到项目中"><span class="nav-number">2.3.</span> <span class="nav-text">复制data文件到项目中</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#标准输入输出和重定向"><span class="nav-number">3.</span> <span class="nav-text">标准输入输出和重定向</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#书上案例BinarySearch-class"><span class="nav-number">3.1.</span> <span class="nav-text">书上案例BinarySearch.class</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Preface"><span class="nav-number">1.</span> <span class="nav-text">Preface</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#导入标准库Std"><span class="nav-number">2.</span> <span class="nav-text">导入标准库Std*:</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载"><span class="nav-number">2.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#导入jar包"><span class="nav-number">2.2.</span> <span class="nav-text">导入jar包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复制data文件到项目中"><span class="nav-number">2.3.</span> <span class="nav-text">复制data文件到项目中</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#标准输入输出和重定向"><span class="nav-number">3.</span> <span class="nav-text">标准输入输出和重定向</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#书上案例BinarySearch-class"><span class="nav-number">3.1.</span> <span class="nav-text">书上案例BinarySearch.class</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将txt文件作为main函数的参数"><span class="nav-number">3.2.</span> <span class="nav-text">将txt文件作为main函数的参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将tinyT-txt文件重定向为标准输入"><span class="nav-number">3.3.</span> <span class="nav-text">将tinyT.txt文件重定向为标准输入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将temp-txt文件重定向为标准输出"><span class="nav-number">3.4.</span> <span class="nav-text">将temp.txt文件重定向为标准输出</span></a></li></ol></li></ol></div>
             
 
           </div>
