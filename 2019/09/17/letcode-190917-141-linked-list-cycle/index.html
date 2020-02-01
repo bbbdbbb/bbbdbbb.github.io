@@ -96,12 +96,12 @@
 <meta property="og:site_name" content="bbbdbbb&#39;s Blog">
 <meta property="og:description" content="PrefaceGiven a linked list, determine if it has a cycle in it.Follow up:Can you solve it using O(1) (i.e. constant) memory?">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/img/letcode-190917-141-linked-list-cycle-preface.jpg">
-<meta property="og:updated_time" content="2019-09-17T09:51:15.140Z">
+<meta property="og:image" content="http://yoursite.com/img/letcode/letcode-190917-141-linked-list-cycle-preface/head.jpg">
+<meta property="og:updated_time" content="2020-02-01T15:05:49.682Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="letcode141判断链表是否有环">
 <meta name="twitter:description" content="PrefaceGiven a linked list, determine if it has a cycle in it.Follow up:Can you solve it using O(1) (i.e. constant) memory?">
-<meta name="twitter:image" content="http://yoursite.com/img/letcode-190917-141-linked-list-cycle-preface.jpg">
+<meta name="twitter:image" content="http://yoursite.com/img/letcode/letcode-190917-141-linked-list-cycle-preface/head.jpg">
 
 
 
@@ -379,7 +379,7 @@
       
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p><img src="/img/letcode-190917-141-linked-list-cycle-preface.jpg" alt></p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p><img src="/img/letcode/letcode-190917-141-linked-list-cycle-preface/head.jpg" alt></p>
 <h1 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h1><p>Given a linked list, determine if it has a cycle in it.<br><strong>Follow up:</strong><br>Can you solve it using O(1) (i.e. constant) memory?</p>
 <a id="more"></a>
 <h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>&nbsp;&nbsp;一开始，我想的是直接遍历链表，如果出现某一个节点的next指针为<code>null</code>,则证明该链表无环，反之有环。在写代码时发现，当链表有环时，程序会陷入死循环中。所以这个思路只能判断链表无环，不能判断链表有环。<br>&nbsp;&nbsp;换一个思路,利用快慢指针<span id="inline-blue">fast</span>和指针<span id="inline-blue">slow</span>同时指向head，然后fast向后走两步，slow向后走一步；若fast指向null，证明该链表无环；若fast在某一时刻和slow指向同一节点<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="指针fast在环中跑了一圈或多圈
