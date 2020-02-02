@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="习题答案,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Preface在学习《算法》第四版中，记录自己做的习题1.3.1，1.3.2，1.3.3，1.3.4，1.3.5的答案，若有错误欢迎提醒。">
+<meta name="keywords" content="习题答案">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《算法》第四版(习题1.3.1，1.3.2，1.3.3，1.3.4，1.3.5)">
+<meta property="og:url" content="http://yoursite.com/2020/02/02/Algorithms4-200202-P1-3-01-P1-3-05/index.html">
+<meta property="og:site_name" content="bbbdbbb&#39;s Blog">
+<meta property="og:description" content="Preface在学习《算法》第四版中，记录自己做的习题1.3.1，1.3.2，1.3.3，1.3.4，1.3.5的答案，若有错误欢迎提醒。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/img/Algorithms4/200202-P1_3_01-P1_3_05/head.jpg">
+<meta property="og:image" content="http://yoursite.com/img/Algorithms4/200202-P1_3_01-P1_3_05/p1_3_02-outcome.jpg">
+<meta property="og:image" content="http://yoursite.com/img/Algorithms4/200202-P1_3_01-P1_3_05/p1_3_03-outcome.jpg">
+<meta property="og:updated_time" content="2020-02-02T14:43:52.331Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="《算法》第四版(习题1.3.1，1.3.2，1.3.3，1.3.4，1.3.5)">
+<meta name="twitter:description" content="Preface在学习《算法》第四版中，记录自己做的习题1.3.1，1.3.2，1.3.3，1.3.4，1.3.5的答案，若有错误欢迎提醒。">
+<meta name="twitter:image" content="http://yoursite.com/img/Algorithms4/200202-P1_3_01-P1_3_05/head.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #FF4500; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #FF4500, 0 0 5px #FF4500; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #FF4500;    /*上边框颜色*/
+        border-left-color: #FF4500;    /*左边框颜色*/
+    }
+</style>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/02/02/Algorithms4-200202-P1-3-01-P1-3-05/">
+
+
+
+
+
+  <title>《算法》第四版(习题1.3.1，1.3.2，1.3.3，1.3.4，1.3.5) | bbbdbbb's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">bbbdbbb's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/02/Algorithms4-200202-P1-3-01-P1-3-05/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="浜浜滨的棒棒冰">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="bbbdbbb's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">《算法》第四版(习题1.3.1，1.3.2，1.3.3，1.3.4，1.3.5)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-02T21:31:01+08:00">
+                2020-02-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Algorithms4/" itemprop="url" rel="index">
+                    <span itemprop="name">Algorithms4</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p><img src="/img/Algorithms4/200202-P1_3_01-P1_3_05/head.jpg" alt></p>
+<h1 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h1><p>在学习《算法》第四版中，记录自己做的习题1.3.1，1.3.2，1.3.3，1.3.4，1.3.5的答案，若有错误欢迎提醒。</p>
+<a id="more"></a>
+<h1 id="习题1-3-1"><a href="#习题1-3-1" class="headerlink" title="习题1.3.1"></a>习题1.3.1</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p id="div-border-top-blue">为FixedCapacityStackOfStrings添加一个方法isFull()</p>
+
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre><code>package chapter1;
+
+/**   
+*    
+* 项目名称：Algorithms4   
+* 类名称：P1_3_01   
+* 类描述：练习1.3.1,为FixedCapacityStackOfStrings添加isFull（方法）   
+* 创建人：bbbdbbb   
+* 创建时间：2020年1月31日 下午8:36:10   
+* @version        
+*/
+public class P1_3_01 {
+    /**
+     * 添加isFull()方法后的代码
+     */
+//    public class FixedCapacityStackOfStrings&lt;Item&gt; {
+//        private Item[] a;
+//        private int N;
+//        
+//        public FixedCapacityStackOfStrings(int cap){
+//            a = (Item[]) new Object[cap];
+//        }
+//        public boolean isEmpty(){
+//            return N==0;
+//        }
+//        public int size(){
+//            return N;
+//        }
+//        public void push(Item item){
+//            a[N++] = item;
+//        }
+//        public Item pop(){
+//            return a[--N];
+//        }
+//        public boolean isFull(){
+//            return N==a.length;
+//        }
+//    }
+
+
+}</code></pre><h1 id="习题1-3-2"><a href="#习题1-3-2" class="headerlink" title="习题1.3.2"></a>习题1.3.2</h1><h2 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h2><p id="div-border-top-blue">给定以下输入，java Stack的输出是什么？<br>it was - the best - of times - - - it was - the - - </p>
+
+<h2 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h2><pre><code>package chapter1;
+
+import collection.Stack;
+import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdOut;
+
+/**   
+*    
+* 项目名称：Algorithms4   
+* 类名称：P1_3_02   
+* 类描述：习题1.3.2,给一组新的输入，调试P84的main方法   
+* 创建人：bbbdbbb   
+* 创建时间：2020年1月31日 下午8:51:02   
+* @version        
+*/
+public class P1_3_02 {
+    public static void main(String[] args) {
+        Stack&lt;String&gt; s = new Stack&lt;&gt;();
+        while(!StdIn.isEmpty()){
+            String item = StdIn.readString();
+            if(!item.equals(&quot;-&quot;))
+                s.push(item);
+            else if(!s.isEmpty()){
+                StdOut.print(s.pop()+&quot;  &quot;);
+            }
+
+        }
+        StdOut.println(&quot;\n剩下的元素数量：&quot;+s.size());
+    }
+}</code></pre><h2 id="运行结果截图"><a href="#运行结果截图" class="headerlink" title="运行结果截图"></a>运行结果截图</h2><p><img src="/img/Algorithms4/200202-P1_3_01-P1_3_05/p1_3_02-outcome.jpg" alt><br>&nbsp;&nbsp;习题1.3.2应该是说将P84的测试用例中的类FixedCapacityStack换成P94的类Stack，用题目中给的数据作为新的测试数据。如果不会P84使用方法中的设置标准输入文件，<br>请看我的这篇blog：<a href="https://bbbdbbb.github.io/2019/12/17/Algorithms4-191217-how-to-use-eclipse/" target="_blank" rel="noopener">设置标准输入，输出</a> &nbsp;这里需要注意一定，程序在读取标准输入中的数据后，不会自己结束，需要在console面板中按快捷键<span id="inline-blue">Ctrl+z</span>,就可以继续执行后面的代码了。</p>
+<h1 id="习题1-3-3"><a href="#习题1-3-3" class="headerlink" title="习题1.3.3"></a>习题1.3.3</h1><h2 id="题目描述-2"><a href="#题目描述-2" class="headerlink" title="题目描述"></a>题目描述</h2><p id="div-border-top-blue">假设某个用例程序会进行一系列入栈和出栈的混合操作。入栈操作会将整数0到9按顺序压入栈；出栈操作会打印出返回值。下面哪种序列是不可能产生的？<br>
+a. 4 3 2 1 0 9 8 7 6 5 <br>
+b. 4 6 8 7 5 3 2 9 0 1 <br>   
+c. 2 5 6 7 4 8 9 3 1 0 <br>   
+d. 4 3 2 1 0 5 6 7 8 9 <br>   
+e. 1 2 3 4 5 6 9 8 7 0 <br>   
+f. 0 4 6 5 3 8 1 7 2 9 <br>   
+g. 1 4 7 9 8 6 5 3 0 2 <br> 
+h. 2 1 4 3 6 5 8 7 9 0 
+</p>
+
+<h2 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h2><pre><code>package chapter1;
+
+import edu.princeton.cs.algs4.Queue;
+import edu.princeton.cs.algs4.Stack;
+import edu.princeton.cs.algs4.StdIn;
+
+/**
+ * 
+ * 项目名称：Algorithms4 
+ * 类名称：P1_3_03 
+ * 类描述：练习1.3.03,判断出栈顺序是否正确 入栈操作会将整数0到9按顺序压入栈；
+ *              出栈操作会打印出返回值。 下面哪种序列是不可能产生的？ 
+ * 创建人：bbbdbbb 
+ * 创建时间：2020年1月31日 下午9:16:15
+ * 
+ * @version
+ */
+public class P1_3_03 {
+    /**
+     * 这到题可以直接判断，但是想到我要参加蓝桥杯比赛（我是一个新手）， 就打算使用代码来判断整数的出栈顺序是否正确
+     */
+    @SuppressWarnings(&quot;unchecked&quot;)
+    public static void main(String[] args) {
+        int N = 8;// 输入:行数
+        // 建立一个整数栈的数组
+        Queue&lt;Integer&gt;[] a = (Queue&lt;Integer&gt;[]) new Queue[N];
+        int i = 0;
+        for(int j=0;j&lt;N;j++){
+            a[j] = new Queue&lt;Integer&gt;();
+        }
+
+        //获取数据
+        for (;i&lt;N; i++) {
+            for(int j=0;j&lt;10;j++){
+                if (!StdIn.isEmpty()) {
+                    int item = StdIn.readInt();
+
+                    a[i].enqueue(item);
+                }else{
+                    System.out.println(&quot;输入数据错误！！！&quot;);
+                    System.exit(0);
+                }    
+            }                    
+        }
+
+        //判断
+        for(int j=0;j&lt;N;j++){
+            //先打印 题目中整数的出栈序列
+            for(int num : a[j]){
+                System.out.print(num+&quot;  &quot;);
+            }
+
+            boolean bigFlag = true;        
+            //判断
+            while(!a[j].isEmpty()){
+                Queue&lt;Integer&gt; temp = new Queue&lt;Integer&gt;();
+                int number = a[j].dequeue();//从栈中拿出来一个数number
+                for(int num : a[j]){//把栈中所有比number小的数压入（复制）到temp栈中
+                    if(number &gt; num){
+                        temp.enqueue(num);
+                    }
+                }
+                //判断比number小的数是否逆序
+                boolean flag = true;
+                while(!temp.isEmpty()){
+                    int t = temp.dequeue();
+                    if(number&lt;t){
+                        flag = false;
+                        break;
+                    }
+                    number = t;
+                }
+                if(flag==false){
+                    bigFlag = false;
+                    System.out.println(bigFlag);
+                    break;
+                }
+            }
+
+            if(bigFlag==true){
+                System.out.println(bigFlag);
+            }
+        }
+
+    }
+}</code></pre><h2 id="运行结果截图-1"><a href="#运行结果截图-1" class="headerlink" title="运行结果截图"></a>运行结果截图</h2><p><img src="/img/Algorithms4/200202-P1_3_01-P1_3_05/p1_3_03-outcome.jpg" alt></p>
+
+      
+    </div>
+    
+    
+    
+
+	
+	
+    
+
+    
+
+    
+		
+
+	
+    <footer class="post-footer">
+      
+		<div style="text-align:center;color: #ccc;font-size:14px;">---------------- The End ----------------</div>
+		<div>
+			<p id="div-border-left-red">
+			<b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br>
+			<span>
+				<b>本文地址: </b><a href="/2020/02/02/Algorithms4-200202-P1-3-01-P1-3-05/" title="《算法》第四版(习题1.3.1，1.3.2，1.3.3，1.3.4，1.3.5)">http://yoursite.com/2020/02/02/Algorithms4-200202-P1-3-01-P1-3-05/</a><br><b>转载请注明出处, 谢谢！</b>
+			</span>
+			</p>
+		</div>
+        <div class="post-tags">
+          
+            <a href="/tags/习题答案/" rel="tag"><i class="fa fa-tag"></i> 习题答案</a>
+          
+        </div>
+      
+
+      
+      
+	  	
+      
+
+      
+	  	
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/17/Algorithms4-191217-how-to-use-eclipse/" rel="next" title="学习《算法 4》需要注意的标准输入输出和重定向">
+                <i class="fa fa-chevron-left"></i> 学习《算法 4》需要注意的标准输入输出和重定向
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+	  
+	  
+    </footer>
+  </div>
+  
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="浜浜滨的棒棒冰">
+            
+              <p class="site-author-name" itemprop="name">浜浜滨的棒棒冰</p>
+              <p class="site-description motion-element" itemprop="description">大学生 | 程序员 | 小说 | 美剧 | 运动</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Preface"><span class="nav-number">1.</span> <span class="nav-text">Preface</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#习题1-3-1"><span class="nav-number">2.</span> <span class="nav-text">习题1.3.1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目描述"><span class="nav-number">2.1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">2.2.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#习题1-3-2"><span class="nav-number">3.</span> <span class="nav-text">习题1.3.2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目描述-1"><span class="nav-number">3.1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码-1"><span class="nav-number">3.2.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行结果截图"><span class="nav-number">3.3.</span> <span class="nav-text">运行结果截图</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#习题1-3-3"><span class="nav-number">4.</span> <span class="nav-text">习题1.3.3</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目描述-2"><span class="nav-number">4.1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码-2"><span class="nav-number">4.2.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行结果截图-1"><span class="nav-number">4.3.</span> <span class="nav-text">运行结果截图</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">浜浜滨的棒棒冰</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+	
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+  <script type="text/javascript" src="/js/src/dytitle.js"></script>
+
+  <!--script type="text/javascript" color="255,0,204" opacity='0.3' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script-->
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"superSample":2,"width":100,"height":100,"position":"left"},"mobile":{"show":false},"react":{"opacityDefault":0.9,"opacityOnHover":0.5},"log":false});</script></body>
+</html>
