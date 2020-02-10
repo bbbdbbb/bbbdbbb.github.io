@@ -91,17 +91,17 @@
 <meta name="description" content="PrefaceGiven a linked list, determine if it has a cycle in it.Follow up:Can you solve it using O(1) (i.e. constant) memory?">
 <meta name="keywords" content="算法题目,链表">
 <meta property="og:type" content="article">
-<meta property="og:title" content="letcode141判断链表是否有环">
+<meta property="og:title" content="leetcode141判断链表是否有环">
 <meta property="og:url" content="http://yoursite.com/2019/09/17/letcode-190917-141-linked-list-cycle/index.html">
 <meta property="og:site_name" content="bbbdbbb&#39;s Blog">
 <meta property="og:description" content="PrefaceGiven a linked list, determine if it has a cycle in it.Follow up:Can you solve it using O(1) (i.e. constant) memory?">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/img/letcode/letcode-190917-141-linked-list-cycle-preface/head.jpg">
-<meta property="og:updated_time" content="2020-02-01T15:05:49.682Z">
+<meta property="og:image" content="http://yoursite.com/img/leetcode/letcode-190917-141-linked-list-cycle-preface/head.jpg">
+<meta property="og:updated_time" content="2020-02-10T13:52:49.993Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="letcode141判断链表是否有环">
+<meta name="twitter:title" content="leetcode141判断链表是否有环">
 <meta name="twitter:description" content="PrefaceGiven a linked list, determine if it has a cycle in it.Follow up:Can you solve it using O(1) (i.e. constant) memory?">
-<meta name="twitter:image" content="http://yoursite.com/img/letcode/letcode-190917-141-linked-list-cycle-preface/head.jpg">
+<meta name="twitter:image" content="http://yoursite.com/img/leetcode/letcode-190917-141-linked-list-cycle-preface/head.jpg">
 
 
 
@@ -153,7 +153,7 @@
 
 
 
-  <title>letcode141判断链表是否有环 | bbbdbbb's Blog</title>
+  <title>leetcode141判断链表是否有环 | bbbdbbb's Blog</title>
   
 
 
@@ -307,7 +307,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">letcode141判断链表是否有环</h1>
+          <h1 class="post-title" itemprop="name headline">leetcode141判断链表是否有环</h1>
         
 
         <div class="post-meta">
@@ -342,8 +342,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/letcode/" itemprop="url" rel="index">
-                    <span itemprop="name">letcode</span>
+                  <a href="/categories/leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">leetcode</span>
                   </a>
                 </span>
 
@@ -379,7 +379,7 @@
       
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p><img src="/img/letcode/letcode-190917-141-linked-list-cycle-preface/head.jpg" alt></p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p><img src="/img/leetcode/letcode-190917-141-linked-list-cycle-preface/head.jpg" alt></p>
 <h1 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h1><p>Given a linked list, determine if it has a cycle in it.<br><strong>Follow up:</strong><br>Can you solve it using O(1) (i.e. constant) memory?</p>
 <a id="more"></a>
 <h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>&nbsp;&nbsp;一开始，我想的是直接遍历链表，如果出现某一个节点的next指针为<code>null</code>,则证明该链表无环，反之有环。在写代码时发现，当链表有环时，程序会陷入死循环中。所以这个思路只能判断链表无环，不能判断链表有环。<br>&nbsp;&nbsp;换一个思路,利用快慢指针<span id="inline-blue">fast</span>和指针<span id="inline-blue">slow</span>同时指向head，然后fast向后走两步，slow向后走一步；若fast指向null，证明该链表无环；若fast在某一时刻和slow指向同一节点<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="指针fast在环中跑了一圈或多圈
@@ -443,7 +443,7 @@ public class Solution {
 			<p id="div-border-left-red">
 			<b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br>
 			<span>
-				<b>本文地址: </b><a href="/2019/09/17/letcode-190917-141-linked-list-cycle/" title="letcode141判断链表是否有环">http://yoursite.com/2019/09/17/letcode-190917-141-linked-list-cycle/</a><br><b>转载请注明出处, 谢谢！</b>
+				<b>本文地址: </b><a href="/2019/09/17/letcode-190917-141-linked-list-cycle/" title="leetcode141判断链表是否有环">http://yoursite.com/2019/09/17/letcode-190917-141-linked-list-cycle/</a><br><b>转载请注明出处, 谢谢！</b>
 			</span>
 			</p>
 		</div>
@@ -466,8 +466,8 @@ public class Solution {
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/09/17/letcode-190917-206-reverse-a-singly-linked-list/" rel="next" title="letcode206反转一个单链表">
-                <i class="fa fa-chevron-left"></i> letcode206反转一个单链表
+              <a href="/2019/09/17/letcode-190917-206-reverse-a-singly-linked-list/" rel="next" title="leetcode206反转一个单链表">
+                <i class="fa fa-chevron-left"></i> leetcode206反转一个单链表
               </a>
             
           </div>
@@ -560,7 +560,7 @@ public class Solution {
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -582,7 +582,7 @@ public class Solution {
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

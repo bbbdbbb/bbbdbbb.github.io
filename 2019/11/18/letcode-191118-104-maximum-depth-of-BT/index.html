@@ -91,17 +91,17 @@
 <meta name="description" content="PrefaceGiven a binary tree, find its maximum depth.The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.Note:A leaf is a node with no chil">
 <meta name="keywords" content="算法题目,树">
 <meta property="og:type" content="article">
-<meta property="og:title" content="letcode104二叉树的最大深度">
+<meta property="og:title" content="leetcode104二叉树的最大深度">
 <meta property="og:url" content="http://yoursite.com/2019/11/18/letcode-191118-104-maximum-depth-of-BT/index.html">
 <meta property="og:site_name" content="bbbdbbb&#39;s Blog">
 <meta property="og:description" content="PrefaceGiven a binary tree, find its maximum depth.The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.Note:A leaf is a node with no chil">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/img/letcode/letcode-191118-104-maximum-depth-of-BT/head.jpg">
-<meta property="og:updated_time" content="2019-12-02T05:17:23.506Z">
+<meta property="og:image" content="http://yoursite.com/img/leetcode/letcode-191118-104-maximum-depth-of-BT/head.jpg">
+<meta property="og:updated_time" content="2020-02-10T13:52:45.008Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="letcode104二叉树的最大深度">
+<meta name="twitter:title" content="leetcode104二叉树的最大深度">
 <meta name="twitter:description" content="PrefaceGiven a binary tree, find its maximum depth.The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.Note:A leaf is a node with no chil">
-<meta name="twitter:image" content="http://yoursite.com/img/letcode/letcode-191118-104-maximum-depth-of-BT/head.jpg">
+<meta name="twitter:image" content="http://yoursite.com/img/leetcode/letcode-191118-104-maximum-depth-of-BT/head.jpg">
 
 
 
@@ -153,7 +153,7 @@
 
 
 
-  <title>letcode104二叉树的最大深度 | bbbdbbb's Blog</title>
+  <title>leetcode104二叉树的最大深度 | bbbdbbb's Blog</title>
   
 
 
@@ -307,7 +307,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">letcode104二叉树的最大深度</h1>
+          <h1 class="post-title" itemprop="name headline">leetcode104二叉树的最大深度</h1>
         
 
         <div class="post-meta">
@@ -342,8 +342,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/letcode/" itemprop="url" rel="index">
-                    <span itemprop="name">letcode</span>
+                  <a href="/categories/leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">leetcode</span>
                   </a>
                 </span>
 
@@ -379,7 +379,7 @@
       
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p><img src="/img/letcode/letcode-191118-104-maximum-depth-of-BT/head.jpg" alt></p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p><img src="/img/leetcode/letcode-191118-104-maximum-depth-of-BT/head.jpg" alt></p>
 <h1 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h1><p>Given a binary tree, find its maximum depth.<br>The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.<br><strong>Note:</strong><br>A leaf is a node with no children.</p>
 <a id="more"></a>
 <h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>&nbsp;&nbsp;使用广度优先遍历树的方法：<br>&nbsp;&nbsp;第一步，定义一个队列<span id="inline-blue">queue</span>,从树root中读出树的根节点放进<span id="inline-blue">queue</span>中。<br>&nbsp;&nbsp;第二步，让<span id="inline-blue">queue</span>中的节点依次出队列，每出队一个节点，就将其左右子节点添加到<span id="inline-blue">queue</span>中。<br>&nbsp;&nbsp;第三步，当这一层的所有节点都以出队，树的高度<span id="inline-green">high</span>就加一，然后用新入队的子节点们作为新的一层重复第二步，直到当前层的所有节点都没有子节点（最后一层）。<br>&nbsp;&nbsp;注意：这里会设计到多个变量，用于记录当前层的未出队的节点个数<span id="inline-green">num</span>,用于记录下一层入队的节点个数<span id="inline-green">count</span>,要明白它们所表示的含义，不要弄混淆。</p>
@@ -454,7 +454,7 @@ class Solution {
 			<p id="div-border-left-red">
 			<b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br>
 			<span>
-				<b>本文地址: </b><a href="/2019/11/18/letcode-191118-104-maximum-depth-of-BT/" title="letcode104二叉树的最大深度">http://yoursite.com/2019/11/18/letcode-191118-104-maximum-depth-of-BT/</a><br><b>转载请注明出处, 谢谢！</b>
+				<b>本文地址: </b><a href="/2019/11/18/letcode-191118-104-maximum-depth-of-BT/" title="leetcode104二叉树的最大深度">http://yoursite.com/2019/11/18/letcode-191118-104-maximum-depth-of-BT/</a><br><b>转载请注明出处, 谢谢！</b>
 			</span>
 			</p>
 		</div>
@@ -571,7 +571,7 @@ class Solution {
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -593,7 +593,7 @@ class Solution {
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
