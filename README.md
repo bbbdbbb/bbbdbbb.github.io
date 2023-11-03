@@ -1,3 +1,2 @@
 # bbbdbbb.github.io
-blog
-test 20231103
+20231103
