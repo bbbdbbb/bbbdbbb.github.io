@@ -21,7 +21,7 @@ I hold a bachelor's degree from [China West Normal University](https://www.cwnu.
 
 My research interest mainly includes Computer vision and Affective computing, MLLM , and AU
 
-> 📢📢📢 <font color=red>I am looking for an internship opportunity in the field of  MLLM (2024-2025).</font> If you would like to discuss potential opportunities or learn more about my qualifications, please feel free to [contact me](zebang.cheng@gmail.com). 😊
+> 📢📢📢 <font color=red>I am looking for an internship opportunity in the field of  MLLM (2024-2025).</font> If you would like to discuss potential opportunities or learn more about my qualifications, please feel free to [contact me]<zebang.cheng@gmail.com>. 😊
 
 
 # 🔥 News
