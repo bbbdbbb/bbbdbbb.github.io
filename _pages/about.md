@@ -53,7 +53,7 @@ My research interest mainly includes Computer vision and Affective computing, ML
 
 ---
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">RCAR 2023</div><img src='images/uav.png' alt="sym" width="100%"></div></div>
+<!-- #div class='paper-box'><div class='paper-box-image'><div><div class="badge">RCAR 2023</div><img src='images/uav.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Real-time UAV Localization and Tracking in Multi-Weather Conditions using Multispectral Image Analysis](../resources/rcar23-119.pdf)
@@ -65,9 +65,9 @@ My research interest mainly includes Computer vision and Affective computing, ML
 - We have devised an approach for real-time tracking that integrates the strengths of both the YOLOv5 object detection algorithm and the KCF tracking algorithm while compensating for their respective weaknesses.
 
 </div>
-</div>
+</div>  -->
 
-<!-- # 👨‍💻 Experience
+# 👨‍💻 Experience
 - *2023.04 - now* &ensp; Research Intern, [Tencent YouTu Lab](https://open.youtu.qq.com/), Shenzhen, China
 - *2022.07 - 2023.01* &ensp; Research Intern, [Zhejiang Lab](https://en.zhejianglab.com/), Hangzhou, China
 - *2021.03 - 2021.08* &ensp; Research Assistant, [SIAT](https://english.siat.ac.cn/), Shenzhen, China
@@ -111,7 +111,7 @@ My research interest mainly includes Computer vision and Affective computing, ML
 
 </div>
 </div>
-   -->
+   
 # 🏅 Selected Awards
 - *2020* &ensp; Second Prize of SZTU Freshman Scholarship (6000 CNY)
 - *2022* &ensp; China Undergraduate Mathematical Contest in Modeling, National Second Prize (top 2%), 2022
