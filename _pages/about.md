@@ -37,8 +37,10 @@ My research interest mainly includes Computer vision and Affective computing, ML
 # 📝 Publications
 ## 📌 Pinned
 <div class='paper-box-top'>
-<!--   <div class="badge" style="position: sticky; top: 0;">ACMMM 2023 (Grand Challenge)</div><div class='paper-box-top-image'> -->
-  <div><img src='images/grand_challenge.jpg' alt="sym" width="100%"></div></div>
+<!--   <div class="badge">ACMMM 2023 (Grand Challenge)</div> -->
+  <div class='paper-box-top-image'>
+    <div><img src='images/grand_challenge.jpg' alt="sym" width="100%"></div>
+  </div>
 <div class='paper-box-top-text' markdown="1">
 
 [Semi-Supervised Multimodal Emotion Recognition with Expression MAE](https://dl.acm.org/doi/abs/10.1145/3581783.3612840)
