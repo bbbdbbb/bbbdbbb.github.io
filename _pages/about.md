@@ -43,11 +43,12 @@ My research interest mainly includes Computer vision and Affective computing, ML
   </div>
 <div class='paper-box-top-text' markdown="1">
 
+**<font color=red>ACMMM 2023 (Grand Challenge)</font>** \| [[Paper]](../resources/acmmm_grand_challenge.pdf)
+
 [Semi-Supervised Multimodal Emotion Recognition with Expression MAE](https://dl.acm.org/doi/abs/10.1145/3581783.3612840)
 
 **Zebang Cheng**, Yuxiang Lin, Zhaoru Chen, Xiang Li, Shuyi Mao, Fan Zhang, Daijun Ding, Bowen Zhang, Xiaojiang Peng
 
-**<font color=red>ACMMM 2023 (Grand Challenge)</font>** \| [[Paper]](../resources/acmmm_grand_challenge.pdf)
 - We propose expMAE (combined with MAE and VideoMAE) to build an impressive emotion recognition classifier.
 - We utilize multimodal large model techniques such as CLIP, MacBERT, and HuBERT to boost the ability of visual features from expMAE.
 - We use the semi-supervised method of pseudo-labeling to solve the skewed distribution of the training set and finally achieve rank 2 among all the participants.
