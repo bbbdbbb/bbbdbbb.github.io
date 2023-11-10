@@ -37,7 +37,7 @@ My research interest mainly includes Computer vision and Affective computing, ML
 # 📝 Publications
 ## 📌 Pinned
 <div class='paper-box-top'>
-  <div class="badge" style="position: sticky; top: 0;">ACMMM 2023 (Grand Challenge)</div><div class='paper-box-top-image'><div>
+<!--   <div class="badge" style="position: sticky; top: 0;">ACMMM 2023 (Grand Challenge)</div><div class='paper-box-top-image'><div> -->
   <img src='images/grand_challenge.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-top-text' markdown="1">
 
