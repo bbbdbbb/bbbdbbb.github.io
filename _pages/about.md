@@ -113,7 +113,5 @@ My research interest mainly includes Computer vision and Affective computing, ML
 </div>
    
 # 🏅 Selected Awards
-- *2020* &ensp; Second Prize of SZTU Freshman Scholarship (6000 CNY)
-- *2022* &ensp; China Undergraduate Mathematical Contest in Modeling, National Second Prize (top 2%), 2022
-- *2023* &ensp; Dahua Outstanding Scholarship (4000 CNY)
-- *2023* &ensp; OpenMMLab MMSTAR I
+- *2022* &ensp; Scholarship for Graduate Admission (5000 CNY)
+- *2023* &ensp; Graduate Entrance Scholarship (10000 CNY)
