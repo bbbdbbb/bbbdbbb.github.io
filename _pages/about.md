@@ -118,5 +118,6 @@ My research interest mainly includes Computer vision and Affective computing, ML
 </div>
    
 # 🏅 Selected Awards
-- *2022* &ensp; Scholarship for Graduate Admission (5000 CNY)
-- *2023* &ensp; Graduate Entrance Scholarship (10000 CNY)
+- *2022* &ensp; Graduate Entrance Scholarship (5000 CNY)
+- *2023* &ensp; Academic Scholarship (10000 CNY)
+- 
