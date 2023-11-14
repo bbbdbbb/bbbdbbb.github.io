@@ -7,9 +7,10 @@
 
 # Site Settings
 title                    : "Zebang Cheng"
-description              : "Undergraduate @ CWNU. <br/>
+description              : "
+                            Undergraduate @ CWNU. <br/>
                             Postgraduate @ SZTU. <br/>
-                            Focusing on CV, MLLM, Affective computing.
+                            Focusing on MER, MLLM.
                             "
 repository               : "bbbdbbb/bbbdbbb.github.io"
 google_scholar_stats_use_cdn : true
